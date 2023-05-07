@@ -1,106 +1,104 @@
 import { SubmitKey } from "../store/config";
-import type { LocaleType } from "./index";
 
-const jp: LocaleType = {
-  WIP: "この機能は開発中です……",
+const cn = {
+  WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "現在は未承認状態です。左下の設定ボタンをクリックし、アクセスパスワードを入力してください。",
+      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码使用密码到QQ群获取，点击左下角[小企鹅](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zu9GwYV_G4QoaAgLLHupQe6uhVkRHLS4&authKey=PdnVbJpRjMd7Cc%2BjIq2eoKxC3WcZ8fb8NcgAuD8R5hTmmQdgVzhQwKmMNF2OwjcL&noverify=0&group_code=594122721)加入QQ群。公益版完全免费，设置密码是为了防止直接共享的API被盗用，若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后",
   },
   ChatItem: {
-    ChatItemCount: (count: number) => `${count} 通のチャット`,
+    ChatItemCount: (count: number) => `${count} 条对话`,
   },
   Chat: {
-    SubTitle: (count: number) => `ChatGPTとの ${count} 通のチャット`,
+    SubTitle: (count: number) => `与 ChatGPT 的 ${count} 条对话`,
     Actions: {
-      ChatList: "メッセージリストを表示",
-      CompressedHistory: "圧縮された履歴プロンプトを表示",
-      Export: "チャット履歴をエクスポート",
-      Copy: "コピー",
+      ChatList: "查看消息列表",
+      CompressedHistory: "查看压缩后的历史 Prompt",
+      Export: "导出聊天记录",
+      Copy: "复制",
       Stop: "停止",
-      Retry: "リトライ",
-      Delete: "Delete",
+      Retry: "重试",
+      Delete: "删除",
     },
-    Rename: "チャットの名前を変更",
-    Typing: "入力中…",
+    Rename: "重命名对话",
+    Typing: "正在输入…",
     Input: (submitKey: string) => {
-      var inputHints = `${submitKey} で送信`;
+      var inputHints = `${submitKey} 发送`;
       if (submitKey === String(SubmitKey.Enter)) {
-        inputHints += "，Shift + Enter で改行";
+        inputHints += "，Shift + Enter 换行";
       }
-      return inputHints + "，/ で自動補完をトリガー";
+      return inputHints + "，/ 触发补全";
     },
-    Send: "送信",
+    Send: "发送",
     Config: {
       Reset: "重置默认",
       SaveAs: "另存为面具",
     },
   },
   Export: {
-    Title: "チャット履歴をMarkdown形式でエクスポート",
-    Copy: "すべてコピー",
-    Download: "ファイルをダウンロード",
-    MessageFromYou: "あなたからのメッセージ",
-    MessageFromChatGPT: "ChatGPTからのメッセージ",
+    Title: "导出聊天记录为 Markdown",
+    Copy: "全部复制",
+    Download: "下载文件",
+    MessageFromYou: "来自你的消息",
+    MessageFromChatGPT: "来自 ChatGPT 的消息",
   },
   Memory: {
-    Title: "履歴メモリ",
-    EmptyContent: "まだ記憶されていません",
-    Send: "メモリを送信",
-    Copy: "メモリをコピー",
-    Reset: "チャットをリセット",
-    ResetConfirm:
-      "リセット後、現在のチャット履歴と過去のメモリがクリアされます。リセットしてもよろしいですか？",
+    Title: "历史摘要",
+    EmptyContent: "对话内容过短，无需总结",
+    Send: "自动压缩聊天记录并作为上下文发送",
+    Copy: "复制摘要",
+    Reset: "重置对话",
+    ResetConfirm: "重置后将清空当前对话记录以及历史摘要，确认重置？",
   },
   Home: {
-    NewChat: "新しいチャット",
-    DeleteChat: "選択したチャットを削除してもよろしいですか？",
-    DeleteToast: "チャットが削除されました",
-    Revert: "元に戻す",
+    NewChat: "新的聊天",
+    DeleteChat: "确认删除选中的对话？",
+    DeleteToast: "已删除会话",
+    Revert: "撤销",
   },
   Settings: {
-    Title: "設定",
-    SubTitle: "設定オプション",
+    Title: "设置",
+    SubTitle: "设置选项",
     Actions: {
-      ClearAll: "すべてのデータをクリア",
-      ResetAll: "すべてのオプションをリセット",
-      Close: "閉じる",
-      ConfirmResetAll: "すべての設定をリセットしてもよろしいですか？",
-      ConfirmClearAll: "すべてのチャットをリセットしてもよろしいですか？",
+      ClearAll: "清除所有数据",
+      ResetAll: "重置所有选项",
+      Close: "关闭",
+      ConfirmResetAll: "确认重置所有配置？",
+      ConfirmClearAll: "确认清除所有数据？",
     },
     Lang: {
       Name: "Language",
       All: "所有语言",
       Options: {
         cn: "简体中文",
-        en: "English",
-        tw: "繁體中文",
-        es: "Español",
-        it: "Italiano",
-        tr: "Türkçe",
-        jp: "日本語",
-        de: "Deutsch",
+        en: "简体中文",
+        tw: "简体中文",
+        es: "简体中文",
+        it: "简体中文",
+        tr: "简体中文",
+        jp: "简体中文",
+        de: "简体中文",
       },
     },
-    Avatar: "アバター",
+    Avatar: "头像",
     FontSize: {
-      Title: "フォントサイズ",
-      SubTitle: "チャット内容のフォントサイズ",
+      Title: "字体大小",
+      SubTitle: "聊天内容的字体大小",
     },
 
     Update: {
-      Version: (x: string) => `現在のバージョン：${x}`,
-      IsLatest: "最新バージョンです",
-      CheckUpdate: "アップデートを確認",
-      IsChecking: "アップデートを確認しています...",
-      FoundUpdate: (x: string) => `新しいバージョンが見つかりました：${x}`,
-      GoToUpdate: "更新する",
+      Version: (x: string) => `当前版本：${x}`,
+      IsLatest: "已是最新版本",
+      CheckUpdate: "检查更新",
+      IsChecking: "正在检查更新...",
+      FoundUpdate: (x: string) => `发现新版本：${x}`,
+      GoToUpdate: "前往更新",
     },
-    SendKey: "送信キー",
-    Theme: "テーマ",
-    TightBorder: "ボーダーレスモード",
+    SendKey: "发送键",
+    Theme: "主题",
+    TightBorder: "无边框模式",
     SendPreviewBubble: {
-      Title: "プレビューバブルの送信",
+      Title: "预览气泡",
       SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     Mask: {
@@ -109,90 +107,89 @@ const jp: LocaleType = {
     },
     Prompt: {
       Disable: {
-        Title: "プロンプトの自動補完を無効にする",
-        SubTitle:
-          "入力フィールドの先頭に / を入力すると、自動補完がトリガーされます。",
+        Title: "禁用提示词自动补全",
+        SubTitle: "在输入框开头输入 / 即可触发自动补全",
       },
-      List: "カスタムプロンプトリスト",
+      List: "自定义提示词列表",
       ListCount: (builtin: number, custom: number) =>
-        `組み込み ${builtin} 件、ユーザー定義 ${custom} 件`,
-      Edit: "編集",
+        `内置 ${builtin} 条，用户定义 ${custom} 条`,
+      Edit: "编辑",
       Modal: {
-        Title: "プロンプトリスト",
-        Add: "新規追加",
-        Search: "プロンプトワード検索",
+        Title: "提示词列表",
+        Add: "新建",
+        Search: "搜索提示词",
       },
       EditModal: {
         Title: "编辑提示词",
       },
     },
     HistoryCount: {
-      Title: "履歴メッセージ数を添付",
-      SubTitle: "リクエストごとに添付する履歴メッセージ数",
+      Title: "附带历史消息数",
+      SubTitle: "每次请求携带的历史消息数",
     },
     CompressThreshold: {
-      Title: "履歴メッセージの長さ圧縮しきい値",
-      SubTitle:
-        "圧縮されていない履歴メッセージがこの値を超えた場合、圧縮が行われます。",
+      Title: "历史消息长度压缩阈值",
+      SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
     },
     Token: {
-      Title: "APIキー",
-      SubTitle: "自分のキーを使用してパスワードアクセス制限を迂回する",
-      Placeholder: "OpenAI APIキー",
+      Title: "API Key",
+      SubTitle: "使用自己的 Key 可绕过密码访问限制",
+      Placeholder: "OpenAI API Key",
     },
+
     Usage: {
-      Title: "残高照会",
+      Title: "余额查询",
       SubTitle(used: any, total: any) {
-        return `今月は $${used} を使用しました。総額は $${total} です。`;
+        return `本月已使用 $${used}，订阅总额 $${total}`;
       },
-      IsChecking: "確認中...",
-      Check: "再確認",
-      NoAccess: "APIキーまたはアクセスパスワードを入力して残高を表示",
+      IsChecking: "正在检查…",
+      Check: "重新检查",
+      NoAccess: "输入 API Key 或访问密码查看余额",
     },
     AccessCode: {
-      Title: "アクセスパスワード",
-      SubTitle: "暗号化アクセスが有効になっています",
-      Placeholder: "アクセスパスワードを入力してください",
+      Title: "访问密码",
+      SubTitle: "已开启加密访问",
+      Placeholder: "请输入访问密码",
     },
-    Model: "モデル (model)",
+    Model: "模型 (model)",
     Temperature: {
-      Title: "ランダム性 (temperature)",
-      SubTitle:
-        "値が大きいほど、回答がランダムになります。1以上の値には文字化けが含まれる可能性があります。",
+      Title: "随机性 (temperature)",
+      SubTitle: "值越大，回复越随机",
     },
     MaxTokens: {
-      Title: "シングルレスポンス制限 (max_tokens)",
-      SubTitle: "1回のインタラクションで使用される最大トークン数",
+      Title: "单次回复限制 (max_tokens)",
+      SubTitle: "单次交互所用的最大 Token 数",
     },
     PresencePenlty: {
-      Title: "トピックの新鮮度 (presence_penalty)",
-      SubTitle: "値が大きいほど、新しいトピックへの展開が可能になります。",
+      Title: "话题新鲜度 (presence_penalty)",
+      SubTitle: "值越大，越有可能扩展到新话题",
     },
   },
   Store: {
-    DefaultTopic: "新しいチャット",
-    BotHello: "何かお手伝いできることはありますか",
-    Error: "エラーが発生しました。しばらくしてからやり直してください。",
+    DefaultTopic: "新的聊天",
+    BotHello: "若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后。有什么可以帮你的吗？继续使用输入你的问题或命令",
+    Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
-        "これは、AI とユーザの過去のチャットを要約した前提となるストーリーです：" +
-        content,
+        "这是 ai 和用户的历史聊天总结作为前情提要：" + content,
       Topic:
-        "4～5文字でこの文章の簡潔な主題を返してください。説明、句読点、感嘆詞、余分なテキストは無しで。もし主題がない場合は、「おしゃべり」を返してください",
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回“闲聊”",
       Summarize:
-        "あなたとユーザの会話を簡潔にまとめて、後続のコンテキストプロンプトとして使ってください。200字以内に抑えてください。",
+        "简要总结一下你和用户的对话，用作后续的上下文提示 prompt，控制在 200 字以内",
     },
   },
   Copy: {
-    Success: "クリップボードに書き込みました",
-    Failed: "コピーに失敗しました。クリップボード許可を与えてください。",
+    Success: "已写入剪切板",
+    Failed: "复制失败，请赋予剪切板权限",
   },
   Context: {
-    Toast: (x: any) => `前置コンテキストが ${x} 件設定されました`,
-    Edit: "前置コンテキストと履歴メモリ",
-    Add: "新規追加",
+    Toast: (x: any) => `已设置 ${x} 条前置上下文`,
+    Edit: "当前对话设置",
+    Add: "新增预设对话",
   },
-  Plugin: { Name: "插件" },
+  Plugin: {
+    Name: "插件",
+  },
   Mask: {
     Name: "面具",
     Page: {
@@ -222,12 +219,12 @@ const jp: LocaleType = {
   },
   NewChat: {
     Return: "返回",
-    Skip: "跳过",
-    Title: "挑选一个面具",
-    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
-    More: "搜索更多",
+    Skip: "直接开始",
     NotShow: "不再展示",
     ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
+    Title: "挑选一个面具",
+    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    More: "查看全部",
   },
 
   UI: {
@@ -239,4 +236,6 @@ const jp: LocaleType = {
   },
 };
 
-export default jp;
+export type LocaleType = typeof cn;
+
+export default cn;
