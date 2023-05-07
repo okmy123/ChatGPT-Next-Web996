@@ -1,244 +1,241 @@
 import { SubmitKey } from "../store/config";
-import type { LocaleType } from "./index";
 
-const tr: LocaleType = {
-  WIP: "Çalışma devam ediyor...",
+const cn = {
+  WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "Yetkisiz erişim, lütfen erişim kodunu ayarlar sayfasından giriniz.",
+      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码使用密码到QQ群获取，点击左下角[小企鹅](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zu9GwYV_G4QoaAgLLHupQe6uhVkRHLS4&authKey=PdnVbJpRjMd7Cc%2BjIq2eoKxC3WcZ8fb8NcgAuD8R5hTmmQdgVzhQwKmMNF2OwjcL&noverify=0&group_code=594122721)加入QQ群。公益版完全免费，设置密码是为了防止直接共享的API被盗用，若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后",
   },
   ChatItem: {
-    ChatItemCount: (count: number) => `${count} mesaj`,
+    ChatItemCount: (count: number) => `${count} 条对话`,
   },
   Chat: {
-    SubTitle: (count: number) => `ChatGPT tarafından ${count} mesaj`,
+    SubTitle: (count: number) => `与 ChatGPT 的 ${count} 条对话`,
     Actions: {
-      ChatList: "Sohbet Listesine Git",
-      CompressedHistory: "Sıkıştırılmış Geçmiş Bellek Komutu",
-      Export: "Tüm Mesajları Markdown Olarak Dışa Aktar",
-      Copy: "Kopyala",
-      Stop: "Durdur",
-      Retry: "Tekrar Dene",
-      Delete: "Delete",
+      ChatList: "查看消息列表",
+      CompressedHistory: "查看压缩后的历史 Prompt",
+      Export: "导出聊天记录",
+      Copy: "复制",
+      Stop: "停止",
+      Retry: "重试",
+      Delete: "删除",
     },
-    Rename: "Sohbeti Yeniden Adlandır",
-    Typing: "Yazıyor…",
+    Rename: "重命名对话",
+    Typing: "正在输入…",
     Input: (submitKey: string) => {
-      var inputHints = `Göndermek için ${submitKey}`;
+      var inputHints = `${submitKey} 发送`;
       if (submitKey === String(SubmitKey.Enter)) {
-        inputHints += ", kaydırmak için Shift + Enter";
+        inputHints += "，Shift + Enter 换行";
       }
-      return inputHints + ", komutları aramak için / (eğik çizgi)";
+      return inputHints + "，/ 触发补全";
     },
-    Send: "Gönder",
+    Send: "发送",
     Config: {
-      Reset: "Reset to Default",
-      SaveAs: "Save as Mask",
+      Reset: "重置默认",
+      SaveAs: "另存为面具",
     },
   },
   Export: {
-    Title: "Tüm Mesajlar",
-    Copy: "Tümünü Kopyala",
-    Download: "İndir",
-    MessageFromYou: "Sizin Mesajınız",
-    MessageFromChatGPT: "ChatGPT'nin Mesajı",
+    Title: "导出聊天记录为 Markdown",
+    Copy: "全部复制",
+    Download: "下载文件",
+    MessageFromYou: "来自你的消息",
+    MessageFromChatGPT: "来自 ChatGPT 的消息",
   },
   Memory: {
-    Title: "Bellek Komutları",
-    EmptyContent: "Henüz değil.",
-    Send: "Belleği Gönder",
-    Copy: "Belleği Kopyala",
-    Reset: "Oturumu Sıfırla",
-    ResetConfirm:
-      "Sıfırlama, geçerli görüşme geçmişini ve geçmiş belleği siler. Sıfırlamak istediğinizden emin misiniz?",
+    Title: "历史摘要",
+    EmptyContent: "对话内容过短，无需总结",
+    Send: "自动压缩聊天记录并作为上下文发送",
+    Copy: "复制摘要",
+    Reset: "重置对话",
+    ResetConfirm: "重置后将清空当前对话记录以及历史摘要，确认重置？",
   },
   Home: {
-    NewChat: "Yeni Sohbet",
-    DeleteChat: "Seçili sohbeti silmeyi onaylıyor musunuz?",
-    DeleteToast: "Sohbet Silindi",
-    Revert: "Geri Al",
+    NewChat: "新的聊天",
+    DeleteChat: "确认删除选中的对话？",
+    DeleteToast: "已删除会话",
+    Revert: "撤销",
   },
   Settings: {
-    Title: "Ayarlar",
-    SubTitle: "Tüm Ayarlar",
+    Title: "设置",
+    SubTitle: "设置选项",
     Actions: {
-      ClearAll: "Tüm Verileri Temizle",
-      ResetAll: "Tüm Ayarları Sıfırla",
-      Close: "Kapat",
-      ConfirmResetAll: "Tüm ayarları sıfırlamak istediğinizden emin misiniz?",
-      ConfirmClearAll: "Tüm sohbeti sıfırlamak istediğinizden emin misiniz?",
+      ClearAll: "清除所有数据",
+      ResetAll: "重置所有选项",
+      Close: "关闭",
+      ConfirmResetAll: "确认重置所有配置？",
+      ConfirmClearAll: "确认清除所有数据？",
     },
     Lang: {
-      Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
-      All: "All Languages",
+      Name: "Language",
+      All: "所有语言",
       Options: {
         cn: "简体中文",
-        en: "English",
-        tw: "繁體中文",
-        es: "Español",
-        it: "Italiano",
-        tr: "Türkçe",
-        jp: "日本語",
-        de: "Deutsch",
+        en: "简体中文",
+        tw: "简体中文",
+        es: "简体中文",
+        it: "简体中文",
+        tr: "简体中文",
+        jp: "简体中文",
+        de: "简体中文",
       },
     },
-    Avatar: "Avatar",
+    Avatar: "头像",
     FontSize: {
-      Title: "Yazı Boyutu",
-      SubTitle: "Sohbet içeriğinin yazı boyutunu ayarlayın",
+      Title: "字体大小",
+      SubTitle: "聊天内容的字体大小",
     },
+
     Update: {
-      Version: (x: string) => `Sürüm: ${x}`,
-      IsLatest: "En son sürüm",
-      CheckUpdate: "Güncellemeyi Kontrol Et",
-      IsChecking: "Güncelleme kontrol ediliyor...",
-      FoundUpdate: (x: string) => `Yeni sürüm bulundu: ${x}`,
-      GoToUpdate: "Güncelle",
+      Version: (x: string) => `当前版本：${x}`,
+      IsLatest: "已是最新版本",
+      CheckUpdate: "检查更新",
+      IsChecking: "正在检查更新...",
+      FoundUpdate: (x: string) => `发现新版本：${x}`,
+      GoToUpdate: "前往更新",
     },
-    SendKey: "Gönder Tuşu",
-    Theme: "Tema",
-    TightBorder: "Tam Ekran",
+    SendKey: "发送键",
+    Theme: "主题",
+    TightBorder: "无边框模式",
     SendPreviewBubble: {
-      Title: "Mesaj Önizleme Balonu",
-      SubTitle: "Preview markdown in bubble",
+      Title: "预览气泡",
+      SubTitle: "在预览气泡中预览 Markdown 内容",
     },
     Mask: {
-      Title: "Mask Splash Screen",
-      SubTitle: "Show a mask splash screen before starting new chat",
+      Title: "面具启动页",
+      SubTitle: "新建聊天时，展示面具启动页",
     },
     Prompt: {
       Disable: {
-        Title: "Otomatik tamamlamayı devre dışı bırak",
-        SubTitle: "Otomatik tamamlamayı kullanmak için / (eğik çizgi) girin",
+        Title: "禁用提示词自动补全",
+        SubTitle: "在输入框开头输入 / 即可触发自动补全",
       },
-      List: "Komut Listesi",
+      List: "自定义提示词列表",
       ListCount: (builtin: number, custom: number) =>
-        `${builtin} yerleşik, ${custom} kullanıcı tanımlı`,
-      Edit: "Düzenle",
+        `内置 ${builtin} 条，用户定义 ${custom} 条`,
+      Edit: "编辑",
       Modal: {
-        Title: "Prompt List",
-        Add: "Add One",
-        Search: "Search Prompts",
+        Title: "提示词列表",
+        Add: "新建",
+        Search: "搜索提示词",
       },
       EditModal: {
-        Title: "Edit Prompt",
+        Title: "编辑提示词",
       },
     },
     HistoryCount: {
-      Title: "Ekli Mesaj Sayısı",
-      SubTitle: "İstek başına ekli gönderilen mesaj sayısı",
+      Title: "附带历史消息数",
+      SubTitle: "每次请求携带的历史消息数",
     },
     CompressThreshold: {
-      Title: "Geçmiş Sıkıştırma Eşiği",
-      SubTitle:
-        "Sıkıştırılmamış mesajların uzunluğu bu değeri aşarsa sıkıştırılır",
+      Title: "历史消息长度压缩阈值",
+      SubTitle: "当未压缩的历史消息超过该值时，将进行压缩",
     },
     Token: {
-      Title: "API Anahtarı",
-      SubTitle: "Erişim kodu sınırını yoksaymak için anahtarınızı kullanın",
-      Placeholder: "OpenAI API Anahtarı",
+      Title: "API Key",
+      SubTitle: "使用自己的 Key 可绕过密码访问限制",
+      Placeholder: "OpenAI API Key",
     },
+
     Usage: {
-      Title: "Hesap Bakiyesi",
+      Title: "余额查询",
       SubTitle(used: any, total: any) {
-        return `Bu ay kullanılan $${used}, abonelik $${total}`;
+        return `本月已使用 $${used}，订阅总额 $${total}`;
       },
-      IsChecking: "Kontrol ediliyor...",
-      Check: "Tekrar Kontrol Et",
-      NoAccess: "Bakiyeyi kontrol etmek için API anahtarını girin",
+      IsChecking: "正在检查…",
+      Check: "重新检查",
+      NoAccess: "输入 API Key 或访问密码查看余额",
     },
     AccessCode: {
-      Title: "Erişim Kodu",
-      SubTitle: "Erişim kontrolü etkinleştirme",
-      Placeholder: "Erişim Kodu Gerekiyor",
+      Title: "访问密码",
+      SubTitle: "已开启加密访问",
+      Placeholder: "请输入访问密码",
     },
-    Model: "Model",
+    Model: "模型 (model)",
     Temperature: {
-      Title: "Gerçeklik",
-      SubTitle:
-        "Daha büyük bir değer girildiğinde gerçeklik oranı düşer ve daha rastgele çıktılar üretir",
+      Title: "随机性 (temperature)",
+      SubTitle: "值越大，回复越随机",
     },
     MaxTokens: {
-      Title: "Maksimum Belirteç",
-      SubTitle:
-        "Girdi belirteçlerinin ve oluşturulan belirteçlerin maksimum uzunluğu",
+      Title: "单次回复限制 (max_tokens)",
+      SubTitle: "单次交互所用的最大 Token 数",
     },
     PresencePenlty: {
-      Title: "Varlık Cezası",
-      SubTitle:
-        "Daha büyük bir değer, yeni konular hakkında konuşma olasılığını artırır",
+      Title: "话题新鲜度 (presence_penalty)",
+      SubTitle: "值越大，越有可能扩展到新话题",
     },
   },
   Store: {
-    DefaultTopic: "Yeni Konuşma",
-    BotHello: "Merhaba! Size bugün nasıl yardımcı olabilirim?",
-    Error: "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyiniz.",
+    DefaultTopic: "新的聊天",
+    BotHello: "若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后。有什么可以帮你的吗？继续使用输入你的问题或命令",
+    Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
-        "Bu, yapay zeka ile kullanıcı arasındaki sohbet geçmişinin bir özetidir: " +
-        content,
+        "这是 ai 和用户的历史聊天总结作为前情提要：" + content,
       Topic:
-        "Lütfen herhangi bir giriş, noktalama işareti, tırnak işareti, nokta, sembol veya ek metin olmadan konuşmamızı özetleyen dört ila beş kelimelik bir başlık oluşturun. Çevreleyen tırnak işaretlerini kaldırın.",
+        "使用四到五个字直接返回这句话的简要主题，不要解释、不要标点、不要语气词、不要多余文本，如果没有主题，请直接返回“闲聊”",
       Summarize:
-        "Gelecekteki bağlam için bir bilgi istemi olarak kullanmak üzere tartışmamızı en fazla 200 kelimeyle özetleyin.",
+        "简要总结一下你和用户的对话，用作后续的上下文提示 prompt，控制在 200 字以内",
     },
   },
   Copy: {
-    Success: "Panoya kopyalandı",
-    Failed: "Kopyalama başarısız oldu, lütfen panoya erişim izni verin",
+    Success: "已写入剪切板",
+    Failed: "复制失败，请赋予剪切板权限",
   },
   Context: {
-    Toast: (x: any) => `${x} bağlamsal bellek komutu`,
-    Edit: "Bağlamsal ve Bellek Komutları",
-    Add: "Yeni Ekle",
+    Toast: (x: any) => `已设置 ${x} 条前置上下文`,
+    Edit: "当前对话设置",
+    Add: "新增预设对话",
   },
   Plugin: {
-    Name: "Plugin",
+    Name: "插件",
   },
   Mask: {
-    Name: "Mask",
+    Name: "面具",
     Page: {
-      Title: "Prompt Template",
-      SubTitle: (count: number) => `${count} prompt templates`,
-      Search: "Search Templates",
-      Create: "Create",
+      Title: "预设角色面具",
+      SubTitle: (count: number) => `${count} 个预设角色定义`,
+      Search: "搜索角色面具",
+      Create: "新建",
     },
     Item: {
-      Info: (count: number) => `${count} prompts`,
-      Chat: "Chat",
-      View: "View",
-      Edit: "Edit",
-      Delete: "Delete",
-      DeleteConfirm: "Confirm to delete?",
+      Info: (count: number) => `包含 ${count} 条预设对话`,
+      Chat: "对话",
+      View: "查看",
+      Edit: "编辑",
+      Delete: "删除",
+      DeleteConfirm: "确认删除？",
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `Edit Prompt Template ${readonly ? "(readonly)" : ""}`,
-      Download: "Download",
-      Clone: "Clone",
+        `编辑预设面具 ${readonly ? "（只读）" : ""}`,
+      Download: "下载预设",
+      Clone: "克隆预设",
     },
     Config: {
-      Avatar: "Bot Avatar",
-      Name: "Bot Name",
+      Avatar: "角色头像",
+      Name: "角色名称",
     },
   },
   NewChat: {
-    Return: "Return",
-    Skip: "Skip",
-    Title: "Pick a Mask",
-    SubTitle: "Chat with the Soul behind the Mask",
-    More: "Find More",
-    NotShow: "Not Show Again",
-    ConfirmNoShow: "Confirm to disable？You can enable it in settings later.",
+    Return: "返回",
+    Skip: "直接开始",
+    NotShow: "不再展示",
+    ConfirmNoShow: "确认禁用？禁用后可以随时在设置中重新启用。",
+    Title: "挑选一个面具",
+    SubTitle: "现在开始，与面具背后的灵魂思维碰撞",
+    More: "查看全部",
   },
 
   UI: {
-    Confirm: "Confirm",
-    Cancel: "Cancel",
-    Close: "Close",
-    Create: "Create",
-    Edit: "Edit",
+    Confirm: "确认",
+    Cancel: "取消",
+    Close: "关闭",
+    Create: "新建",
+    Edit: "编辑",
   },
 };
 
-export default tr;
+export type LocaleType = typeof cn;
+
+export default cn;
