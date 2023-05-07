@@ -4,7 +4,12 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码。",
+      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码。
+      使用密码到QQ群获取，点击左下角小企鹅加入QQ群。
+      本项目完全免费，为何还要设置密码？
+      是为了防止直接共享的API被盗用。
+      若需要独享账号可到https://faka.51mfzy.top/购买
+      在本平台使用包售后三个月，若自行登录使用不包售后",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
@@ -71,13 +76,13 @@ const cn = {
       All: "所有语言",
       Options: {
         cn: "简体中文",
-        en: "English",
-        tw: "繁體中文",
-        es: "Español",
-        it: "Italiano",
-        tr: "Türkçe",
-        jp: "日本語",
-        de: "Deutsch",
+        en: "简体中文",
+        tw: "简体中文",
+        es: "简体中文",
+        it: "简体中文",
+        tr: "简体中文",
+        jp: "简体中文",
+        de: "简体中文",
       },
     },
     Avatar: "头像",
@@ -167,7 +172,8 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "有什么可以帮你的吗",
+    BotHello: "若需要独享账号可到https://faka.51mfzy.top/购买
+      在本平台使用包售后三个月，若自行登录使用不包售后。有什么可以帮你的吗？继续使用输入你的问题或命令",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
