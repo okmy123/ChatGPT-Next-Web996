@@ -188,7 +188,7 @@ const cn = {
     Add: "新增预设对话",
   },
   Plugin: {
-    Name: "插件",
+    Name: "购买独享账号",
   },
   Mask: {
     Name: "面具",
