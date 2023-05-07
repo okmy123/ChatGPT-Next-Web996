@@ -117,7 +117,7 @@ export function SideBar(props: { className?: string }) {
           icon={<PluginIcon />}
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
-          onClick={() => window.location.href="https://www.51baipiao.net/"}
+          onClick={() => window.location.href="https://faka.51mfzy.top/"}
           shadow
         />
       </div>
