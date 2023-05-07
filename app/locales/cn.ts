@@ -4,7 +4,7 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码使用密码到QQ群获取，点击左下角小企鹅加入QQ群。公益版完全免费，设置密码是为了防止直接共享的API被盗用，若需要独享账号可到https://faka.51mfzy.top/购买，在本平台使用包售后三个月，若自行登录使用不包售后",
+      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码使用密码到QQ群获取，点击左下角[小企鹅](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zu9GwYV_G4QoaAgLLHupQe6uhVkRHLS4&authKey=PdnVbJpRjMd7Cc%2BjIq2eoKxC3WcZ8fb8NcgAuD8R5hTmmQdgVzhQwKmMNF2OwjcL&noverify=0&group_code=594122721)加入QQ群。公益版完全免费，设置密码是为了防止直接共享的API被盗用，若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
@@ -167,7 +167,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "若需要独享账号可到https://faka.51mfzy.top/购买，在本平台使用包售后三个月，若自行登录使用不包售后。有什么可以帮你的吗？继续使用输入你的问题或命令",
+    BotHello: "若需要独享账号可[点击发卡站购买](https://faka.51mfzy.top/)，在本平台使用包售后三个月，若自行登录使用不包售后。有什么可以帮你的吗？继续使用输入你的问题或命令",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
