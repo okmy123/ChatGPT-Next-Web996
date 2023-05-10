@@ -168,6 +168,7 @@ export function SideBar(props: { className?: string }) {
                 navigate(Path.NewChat);
               }
             }}
+          
             shadow
           />
         </div>
