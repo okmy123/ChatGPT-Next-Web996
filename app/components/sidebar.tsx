@@ -122,6 +122,7 @@ export function SideBar(props: { className?: string }) {
         />
       </div>
 
+      
       <div
         className={styles["sidebar-body"]}
         onClick={(e) => {
