@@ -7,10 +7,10 @@ import { getBuildConfig } from "./config/build";
 const buildConfig = getBuildConfig();
 
 export const metadata = {
-  title: "ChatGPT公益版",
+  title: "ChatGPT官方API接口版",
   description: "51白嫖 51baipiao.net",
   appleWebApp: {
-    title: "ChatGPT公益版",
+    title: "ChatGPT官方API接口版",
     statusBarStyle: "default",
   },
   themeColor: "#fafafa",
