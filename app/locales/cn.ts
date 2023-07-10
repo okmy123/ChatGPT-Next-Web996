@@ -167,7 +167,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "卡顿或无响应？可能是用户量太大[点这里获得独立账号 APIKEY 使用](https://faka.51mfzy.top/)。\n\n有什么可以帮你的吗？继续使用输入你的问题或命令",
+    BotHello: "点击左下角[设置](/#/settings)按钮输入APIKEY后使用[点这里购买官方独立账号 APIKEY 使用](https://faka.51mfzy.top/)。\n\n有什么可以帮你的吗？继续使用输入你的问题或命令",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
