@@ -98,7 +98,7 @@ export function SideBar(props: { className?: string }) {
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-title"]}>ChatGPT官方API接口版</div>
         <div className={styles["sidebar-sub-title"]}>
-          <title>收藏当前页面</title> <style> body { font-family: Arial, sans-serif; } .label { display: inline-block; background-color: #f2f2f2; color: #333; padding: 10px; border-radius: 5px; font-weight: bold; text-decoration: none; } .label:hover { background-color: #e5e5e5; } </style> <div> <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=zu9GwYV_G4QoaAgLLHupQe6uhVkRHLS4&authKey=PdnVbJpRjMd7Cc%2BjIq2eoKxC3WcZ8fb8NcgAuD8R5hTmmQdgVzhQwKmMNF2OwjcL&noverify=0&group_code=594122721" class="label">🏷 点击进群永不失联</a>
+          进QQ交流群594122721免费获取访问密码
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
